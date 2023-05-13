@@ -5,6 +5,7 @@ internal class Application
 {
     static int N = 5; // Кол-во элементов для массива
     static public Stack tmp = new Stack(); // Временный стэк для перестановок
+    static public int N_OP = 0;
 
     // Вывод содержимого массива
     static void PrintArr(int[] arr)
@@ -122,7 +123,7 @@ internal class Application
     // Сортировка стэка с перегрузкой оператора индексации []
     static void StackWithIndexing()
     {
-        int n = 5;
+        int n = 100;
         Random rnd = new Random();
         Stack stack = new Stack();
 
@@ -151,6 +152,7 @@ internal class Application
         }
 
         stack.Print();
+        Console.WriteLine($"N_OP: {N_OP}");
     }
 
     static void Main(string[] args)
